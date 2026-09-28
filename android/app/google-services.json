@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "898010401594",
+    "project_id": "walk-with-me-live-wyp5dk",
+    "storage_bucket": "walk-with-me-live-wyp5dk.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:898010401594:android:1094087b29ac0729031e03",
+        "android_client_info": {
+          "package_name": "com.mycompany.walkwithmelive"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC67WML3JR2ObFAuqwyV_7HVkSgWPabn50"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
