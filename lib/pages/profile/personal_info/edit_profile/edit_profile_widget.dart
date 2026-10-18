@@ -154,7 +154,9 @@ class _EditProfileWidgetState extends State<EditProfileWidget> {
                         buttonSize: 40.0,
                         fillColor: Color(0xFFFF7F27),
                         icon: FaIcon(
-                          FontAwesomeIcons.pen,
+                          FaIconData(const IconData(/* pen */ 0xf304,
+                              fontFamily: 'FontAwesomeSolid',
+                              fontPackage: 'font_awesome_flutter')),
                           color: FlutterFlowTheme.of(context).info,
                           size: 24.0,
                         ),

@@ -10,3 +10,7 @@ export '/pages/profile/settings_page/settings_page_widget.dart'
     show SettingsPageWidget;
 export '/admin_closures/admin_closures_widget.dart' show AdminClosuresWidget;
 export '/routing/routing_widget.dart' show RoutingWidget;
+export '/tab_pages/favorites_tab/favorites_tab_widget.dart'
+    show FavoritesTabWidget;
+export '/tab_pages/profile_tab/profile_tab_widget.dart' show ProfileTabWidget;
+export '/tab_pages/map_tab/map_tab_widget.dart' show MapTabWidget;

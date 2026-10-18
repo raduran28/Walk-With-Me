@@ -125,6 +125,21 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: RoutingWidget.routeName,
           path: RoutingWidget.routePath,
           builder: (context, params) => RoutingWidget(),
+        ),
+        FFRoute(
+          name: FavoritesTabWidget.routeName,
+          path: FavoritesTabWidget.routePath,
+          builder: (context, params) => FavoritesTabWidget(),
+        ),
+        FFRoute(
+          name: ProfileTabWidget.routeName,
+          path: ProfileTabWidget.routePath,
+          builder: (context, params) => ProfileTabWidget(),
+        ),
+        FFRoute(
+          name: MapTabWidget.routeName,
+          path: MapTabWidget.routePath,
+          builder: (context, params) => MapTabWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -338,6 +353,10 @@ class FFRoute {
                     duration: transitionInfo.duration,
                     reverseDuration: transitionInfo.duration,
                     alignment: transitionInfo.alignment,
+                    curve: transitionInfo.transitionType ==
+                            PageTransitionType.scale
+                        ? const Interval(0.0, 0.5)
+                        : Curves.linear,
                     child: child,
                   ).buildTransitions(
                     context,
