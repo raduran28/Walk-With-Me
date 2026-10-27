@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'map_tab_widget.dart' show MapTabWidget;
+import 'folder_detail_widget.dart' show FolderDetailWidget;
 import 'package:flutter/material.dart';
 
-class MapTabModel extends FlutterFlowModel<MapTabWidget> {
+class FolderDetailModel extends FlutterFlowModel<FolderDetailWidget> {
   @override
   void initState(BuildContext context) {}
 

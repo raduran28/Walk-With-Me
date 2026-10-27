@@ -1,9 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import '/index.dart';
-import 'profile_tab_widget.dart' show ProfileTabWidget;
+import 'favorite_places_page_widget.dart' show FavoritePlacesPageWidget;
 import 'package:flutter/material.dart';
 
-class ProfileTabModel extends FlutterFlowModel<ProfileTabWidget> {
+class FavoritePlacesPageModel
+    extends FlutterFlowModel<FavoritePlacesPageWidget> {
   @override
   void initState(BuildContext context) {}
 

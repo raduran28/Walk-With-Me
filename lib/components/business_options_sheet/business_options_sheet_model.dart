@@ -1,8 +1,9 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'favorites_tab_widget.dart' show FavoritesTabWidget;
+import 'business_options_sheet_widget.dart' show BusinessOptionsSheetWidget;
 import 'package:flutter/material.dart';
 
-class FavoritesTabModel extends FlutterFlowModel<FavoritesTabWidget> {
+class BusinessOptionsSheetModel
+    extends FlutterFlowModel<BusinessOptionsSheetWidget> {
   @override
   void initState(BuildContext context) {}
 

@@ -117,29 +117,26 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => SettingsPageWidget(),
         ),
         FFRoute(
-          name: AdminClosuresWidget.routeName,
-          path: AdminClosuresWidget.routePath,
-          builder: (context, params) => AdminClosuresWidget(),
-        ),
-        FFRoute(
           name: RoutingWidget.routeName,
           path: RoutingWidget.routePath,
           builder: (context, params) => RoutingWidget(),
         ),
         FFRoute(
-          name: FavoritesTabWidget.routeName,
-          path: FavoritesTabWidget.routePath,
-          builder: (context, params) => FavoritesTabWidget(),
+          name: FolderDetailWidget.routeName,
+          path: FolderDetailWidget.routePath,
+          builder: (context, params) => FolderDetailWidget(
+            folderRef: params.getParam(
+              'folderRef',
+              ParamType.DocumentReference,
+              isList: false,
+              collectionNamePath: ['users', 'FavoriteFolders'],
+            ),
+          ),
         ),
         FFRoute(
-          name: ProfileTabWidget.routeName,
-          path: ProfileTabWidget.routePath,
-          builder: (context, params) => ProfileTabWidget(),
-        ),
-        FFRoute(
-          name: MapTabWidget.routeName,
-          path: MapTabWidget.routePath,
-          builder: (context, params) => MapTabWidget(),
+          name: FavoritePlacesPageWidget.routeName,
+          path: FavoritePlacesPageWidget.routePath,
+          builder: (context, params) => FavoritePlacesPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

@@ -30,12 +30,18 @@ class FavoriteFoldersRecord extends FirestoreRecord {
   int get itemCount => _itemCount ?? 0;
   bool hasItemCount() => _itemCount != null;
 
+  // "business" field.
+  List<DocumentReference>? _business;
+  List<DocumentReference> get business => _business ?? const [];
+  bool hasBusiness() => _business != null;
+
   DocumentReference get parentReference => reference.parent.parent!;
 
   void _initializeFields() {
     _name = snapshotData['name'] as String?;
     _createdAt = snapshotData['createdAt'] as DateTime?;
     _itemCount = castToType<int>(snapshotData['itemCount']);
+    _business = getDataList(snapshotData['business']);
   }
 
   static Query<Map<String, dynamic>> collection([DocumentReference? parent]) =>
@@ -98,14 +104,20 @@ class FavoriteFoldersRecordDocumentEquality
 
   @override
   bool equals(FavoriteFoldersRecord? e1, FavoriteFoldersRecord? e2) {
+    const listEquality = ListEquality();
     return e1?.name == e2?.name &&
         e1?.createdAt == e2?.createdAt &&
-        e1?.itemCount == e2?.itemCount;
+        e1?.itemCount == e2?.itemCount &&
+        listEquality.equals(e1?.business, e2?.business);
   }
 
   @override
-  int hash(FavoriteFoldersRecord? e) =>
-      const ListEquality().hash([e?.name, e?.createdAt, e?.itemCount]);
+  int hash(FavoriteFoldersRecord? e) => const ListEquality().hash([
+        e?.name,
+        e?.createdAt,
+        e?.itemCount,
+        const ListEquality().hash(e?.business)
+      ]);
 
   @override
   bool isValidKey(Object? o) => o is FavoriteFoldersRecord;
